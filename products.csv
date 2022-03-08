@@ -1,0 +1,17 @@
+item_code,prod_desc,prod_link,man_id
+PROD_006,ZT2000 Zero Turn Mower,https://www.bobcat.com/mowers/zero-turn-mowers/zt2000,1
+PROD_005,UV34 Gas ,https://www.bobcat.com/utility-products/utv/UV34/UV34-gas-utv,1
+PROD_004,CT1021 Sub-Compact Tractor,https://www.bobcat.com/tractors/models/ct1021/features,1
+PROD_007,S70 Skid Steer Loader,https://www.bobcat.com/loaders/skid-steer-loaders/models/s70/features,1
+PROD_002,CUV82,https://www.cat.com/en_US/products/new/equipment/utility-vehicles/utility-vehicles/1000034280.html,2
+PROD_001,Gator XUV 590M,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
+PROD_008,Z930M Ztrack,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
+PROD_003,1025R Sub-Compact Tractor,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
+ESP_006,ESP for ZT2000 Zero Turn Mower,https://www.bobcat.com/mowers/zero-turn-mowers/zt2000,1
+ESP_005,ESP for UV34 Gas ,https://www.bobcat.com/utility-products/utv/UV34/UV34-gas-utv,1
+ESP_004,ESP for CT1021 Sub-Compact Tractor,https://www.bobcat.com/tractors/models/ct1021/features,1
+ESP_007,ESP for S70 Skid Steer Loader,https://www.bobcat.com/loaders/skid-steer-loaders/models/s70/features,1
+ESP_002,ESP for CUV82,https://www.cat.com/en_US/products/new/equipment/utility-vehicles/utility-vehicles/1000034280.html,2
+ESP_001,ESP for Gator XUV 590M,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
+ESP_008,ESP for Z930M Ztrack,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
+ESP_003,ESP for 1025R Sub-Compact Tractor,https://e-marketing.deere.com/store/landpro-equipmentalexander-ny/ViewAllProducts.do,3
