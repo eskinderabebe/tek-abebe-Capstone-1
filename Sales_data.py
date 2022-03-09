@@ -1,7 +1,7 @@
 
 import os
-from forms import  Addsales
-from flask import Flask, render_template, url_for, redirect
+from forms import  Addsales, Delsales
+from flask import Flask, render_template, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -47,8 +47,6 @@ class Sales(db.Model):
     quantity = db.Column(db.INTEGER)
     sales_entry_date = db.Column(db.DATE)
 
-   # owner = db.relationship('Owner',backref='puppy',uselist=False)
-
     def __init__(self,item_code,emp_id,quantity,sales_entry_date):
         self.item_code = item_code
         self.emp_id = emp_id
@@ -75,20 +73,35 @@ def sales_entry():
     form = Addsales()
 
     if form.validate_on_submit():
-        item_code = form.item_code.data
-        emp_id = form.emp_id.data
+        item_code = form.item_code.data 
+        emp_id = form.emp_id.data   
         quantity = form.quantity.data
         sales_entry_date = form.sales_entry_date.data
-
+        
         # Add sales order entry to database
         sales_entry = Sales(item_code,emp_id,quantity,sales_entry_date)
         db.session.add(sales_entry)
         db.session.commit()
         
+        flash('Has been saved successfully')
+
         return redirect(url_for('index'))
 
     return render_template('add_sales_data.html',form=form)
 
+@app.route('/delete', methods=['GET', 'POST'])
+def del_sales():
 
+    form = Delsales()
+
+    if form.validate_on_submit():
+        id = form.id.data
+        sales_entry = Sales.query.get(id)
+        db.session.delete(sales_entry)
+        db.session.commit()
+
+        return redirect(url_for('index'))
+
+    return render_template('delete.html',form=form)
 if __name__ == '__main__':
     app.run(debug=True)
