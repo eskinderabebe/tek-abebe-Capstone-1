@@ -83,8 +83,6 @@ def sales_entry():
         db.session.add(sales_entry)
         db.session.commit()
         
-        flash('Has been saved successfully')
-
         return redirect(url_for('index'))
 
     return render_template('add_sales_data.html',form=form)
